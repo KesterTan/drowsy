@@ -6,13 +6,14 @@ import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import { MD3LightTheme, Provider as PaperProvider } from "react-native-paper";
 import CameraScreen from "./src/screens/CameraScreen";
 import Dashboard from "./src/screens/Dashboard";
-import Exercises from "./src/screens/Exercises";
+import Home from "./src/screens/Home";
 import Profile from "./src/screens/Profile";
 import Success from "./src/screens/Success";
+import { Camera } from "expo-camera";
 
 const routes = [
   { title: "Dashboard", route: "Dashboard", icon: "dashboard" },
-  { title: "Exercises", route: "Exercises", icon: "sports-baseball" },
+  { title: "Home", route: "Home", icon: "sports-baseball" },
   { title: "Profile", route: "Profile", icon: "person" },
 ];
 
@@ -71,7 +72,7 @@ export default function App() {
       <NavigationContainer>
         <BottomTabs.Navigator tabBar={(props) => <TabBar {...props} />}>
           <BottomTabs.Screen name="Dashboard" component={Dashboard} />
-          <BottomTabs.Screen name="Exercises" component={Exercises} />
+          <BottomTabs.Screen name="Home" component={Home} />
           <BottomTabs.Screen name="Profile" component={Profile} />
           <BottomTabs.Screen
             name="Identity Verification"

@@ -15,10 +15,15 @@ const Exercises: React.FC = ({ navigation }: any) => {
         <View style={styles.contentContainer}>
           <View style={styles.container}>
             <Text style={styles.bigTitle}>Main</Text>
+            <Button
+              onPress={() => navigation.navigate("Identity Verification")}
+              title="Learn More"
+              color="#841584"
+              accessibilityLabel="Learn more about this purple button"
+            />
           </View>
          </View>
       </ScrollView>
-      <Button onPress={() => navigation.navigate("Identity Verification")} />
     </SafeAreaView>
     
   );

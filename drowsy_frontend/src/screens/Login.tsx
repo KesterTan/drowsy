@@ -20,29 +20,6 @@ const Login: React.FC = ({ navigation }: any) => {
   const [snackIsVisible, setSnackIsVisible] = useState<boolean>(false);
   const [snackMessage, setSnackMessage] = useState<string>("");
 
-  /*
-  const handleLogin = () => {
-    signInWithEmailAndPassword(firebaseAuth, email.trim(), password)
-      .then((userCredential) => {
-        const user = userCredential.user;
-        navigation.navigate("Dashboard")
-        console.log(user.email, "successfully signed in!");
-      })
-      .catch((error: any) => {
-        if (error.code === "auth/wrong-password") {
-          setSnackMessage("Incorrect password");
-        } else if (error.code === "auth/invalid-email" || !email) {
-          setSnackMessage("Invalid email");
-        } else if (error.code === "auth/user-not-found") {
-          setSnackMessage("User email not found");
-        } else {
-          setSnackMessage(error.message);
-          console.log(error);
-        }
-        setSnackIsVisible(true);
-        // console.log(error.code);
-      });
-  };*/
   return (
     <ScrollView style={{ flex: 1 }}>
       <View
